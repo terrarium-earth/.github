@@ -1,0 +1,41 @@
+name: Asset [Dev only]
+description: Create a new asset for a project
+title: "[Asset]: "
+labels: ["development"]
+assignees:
+  - CodexAdrian
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is an issue template for creating a new asset for one of our mods, meant to be used by the developers only.
+        Using this as a non-dev will get the issue closed automatically. If you'd like to suggest a new item
+        to add to one of our projects, exit this page and create an "Feature Request" issue.
+  - type: dropdown
+    id: type
+    attributes:
+      label: What kind of asset is it?
+      multiple: false
+      options:
+        - Item
+        - Block
+        - Entity
+        - Structure
+        - Sound
+  - type: dropdown
+    id: animated
+    attributes:
+      label: Should this asset be animated?
+      multiple: false
+      options:
+        - Yes
+        - No
+  - type: input
+    id: description
+    attributes:
+      label: What should it look like?
+      description: Describe
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
